@@ -22,6 +22,8 @@
 # Ignore application configuration
 /config/application.yml
 
-/.session.json
 
+# misc. stuff to ignore
+/.session.json
 /__pycache__/
+/.DS_Store
