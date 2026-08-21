@@ -29,6 +29,11 @@
 /.DS_Store
 
 /Tables/all_collections.csv
+
 /Tables/photos/*
+!Tables/photos/.gitkeep
+
 /Tables/Raw_Downloads/*
+!Tables/Raw_Downloads/.gitkeep
+
 /Tables/.DS_Store
