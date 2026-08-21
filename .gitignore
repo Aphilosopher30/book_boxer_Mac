@@ -27,3 +27,8 @@
 /.session.json
 /__pycache__/
 /.DS_Store
+
+/Tables/all_collections.csv
+/Tables/photos/*
+/Tables/Raw_Downloads/*
+/Tables/.DS_Store
