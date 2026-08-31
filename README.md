@@ -8,7 +8,7 @@ No browser extension needed — runs directly from your terminal.
 ## Quick Setup (do this once)
 
 ### 1. Install Python
-Make sure Python 3 is installed: https://python.org/downloads
+Make sure Python 3 is installed.
 
 ### 2. Install dependencies
 Open a terminal in this folder and run:
