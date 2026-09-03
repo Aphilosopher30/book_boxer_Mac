@@ -15,6 +15,15 @@ import argparse
 from pathlib import Path
 
 
+
+# PLAN
+
+# Input, figure out what the arguments lookls like when they enter.
+# Input, Figure out how the input is processessed and converted into something python can use.
+# Create a method that recieves the input arguments and converts them into what python will use.
+
+
+
 def combine_csvs(input_files: list[Path], output_file: Path, dedup_headers: bool = True) -> None:
     if not input_files:
         print("Error: No input files provided.", file=sys.stderr)
@@ -72,6 +81,8 @@ def combine_csvs(input_files: list[Path], output_file: Path, dedup_headers: bool
 
     print(f"\nDone! {total_rows} total rows written to '{output_file}'.")
 
+def process_file_inputs(arguments):
+    return [Path(file) for file in arguments.files]
 
 def main():
     parser = argparse.ArgumentParser(
@@ -98,7 +109,10 @@ def main():
 
     args = parser.parse_args()
 
-    input_paths = [Path(f) for f in args.files]
+    # print(args)
+    # print(args.files)
+    input_paths = process_file_inputs(args)
+    # print(input_paths)
     output_path = Path(args.output)
 
     print(f"Combining {len(input_paths)} file(s) → '{output_path}'\n")
