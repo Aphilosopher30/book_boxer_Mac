@@ -102,7 +102,6 @@ def main():
     parser.add_argument(
         "--folder",
         metavar="FOULDER",
-        nargs="1",
         help="folder with all CSV files to combine",
     )
     parser.add_argument(
