@@ -16,11 +16,9 @@ from pathlib import Path
 
 
 
-# PLAN
-
-# Input, figure out what the arguments lookls like when they enter.
-# Input, Figure out how the input is processessed and converted into something python can use.
-# Create a method that recieves the input arguments and converts them into what python will use.
+# PLANss
+# Change: input = location of folder
+# Change: get all files in sfoldersss
 
 
 
