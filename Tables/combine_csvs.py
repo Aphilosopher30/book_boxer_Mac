@@ -18,7 +18,8 @@ from pathlib import Path
 
 # PLANss
 # Change: input = location of folder
-# Change: get all files in sfoldersss
+# Change: get all files in folderss
+# Change: MAke Folders an Option, not
 
 
 
