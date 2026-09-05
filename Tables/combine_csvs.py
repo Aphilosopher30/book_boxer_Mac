@@ -100,6 +100,12 @@ def main():
         help="Name of the output file (default: combined.csv).",
     )
     parser.add_argument(
+        "--folder",
+        metavar="FOULDER",
+        nargs="1",
+        help="folder with all CSV files to combine",
+    )
+    parser.add_argument(
         "--no-dedup-headers",
         action="store_false",
         dest="dedup_headers",
