@@ -16,7 +16,7 @@ echo "      Done."
 
 echo ""
 echo "[2/4] Running Tables/Combine_CSVS.py..."
-python Tables/combine_csvs.py ./Tables/Raw_Downloads/*.csv --output Tables/all_collections.csv
+python Tables/combine_csvs.py --folder ./Tables/Raw_Downloads --output Tables/all_collections.csv
 echo "      Done."
 
 echo ""
