@@ -81,7 +81,13 @@ def combine_csvs(input_files: list[Path], output_file: Path, dedup_headers: bool
     print(f"\nDone! {total_rows} total rows written to '{output_file}'.")
 
 def process_file_inputs(arguments):
-    return [Path(file) for file in arguments.files]
+    if arguments.folder == None:
+        return [Path(file) for file in arguments.files]
+    else:
+        all_csv_files = []
+        for file in Path(arguments.folder).glob("*.csv"):
+            all_csv_files.append(file)
+        return all_csv_files
 
 def main():
     parser = argparse.ArgumentParser(
@@ -89,7 +95,7 @@ def main():
     )
     parser.add_argument(
         "files",
-        nargs="+",
+        nargs="*",
         metavar="FILE",
         help="CSV files to combine (supports glob patterns when quoted).",
     )
@@ -101,7 +107,8 @@ def main():
     )
     parser.add_argument(
         "--folder",
-        metavar="FOULDER",
+        default=None,
+        metavar="FOLDER",
         help="folder with all CSV files to combine",
     )
     parser.add_argument(
