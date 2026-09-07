@@ -15,14 +15,6 @@ import argparse
 from pathlib import Path
 
 
-
-# PLANss
-# Change: input = location of folder
-# Change: get all files in folderss
-# Change: MAke Folders an Option, not
-
-
-
 def combine_csvs(input_files: list[Path], output_file: Path, dedup_headers: bool = True) -> None:
     if not input_files:
         print("Error: No input files provided.", file=sys.stderr)
@@ -120,10 +112,7 @@ def main():
 
     args = parser.parse_args()
 
-    # print(args)
-    # print(args.files)
     input_paths = process_file_inputs(args)
-    # print(input_paths)
     output_path = Path(args.output)
 
     print(f"Combining {len(input_paths)} file(s) → '{output_path}'\n")
